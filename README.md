@@ -26,17 +26,18 @@ Restore missing or old rsID column for a GWAS summary statistics file
 
 ## Example output:
 ```
-python3 ~/kukrsID/add_missing_rsID_column.py continuous-20508-both_sexes.tsv.json 
+$ python3 ~/kukrsID/add_missing_rsID_column.py continuous-20508-both_sexes.tsv.json 
+
 === Step 1/3: Sort GWAS SS file by Chr and BP ===
 --- Step 1/3 finished in 394.9851267337799 seconds ---
 === Step 2/3: Generate rsID column and save it to a file ===
-input GWAS SS file:  "/home/kukubuntu/Summary Stats to Fix/data/test_kukrsID_repo/continuous-20508-both_sexes_relevantColumns_asc.tsv"
+input GWAS SS file:  "/home/kukubuntu/data/continuous-20508-both_sexes_relevantColumns_asc.tsv"
 successfully restored 28940544 rsIDs based on provided dbSNP file: '/media/kukubuntu/Samsung_T5/dbSNP151_GRCh37.vcf.gz'
 --- Step 2/3 finished in 3006.899871110916 seconds ---
 === Step 3/3: Concatenate columns of the sorted GWAS SS file and rsID file ===
-concatenated GWAS SS file with the file with restored rsID at: "/home/kukubuntu/Summary Stats to Fix/data/test_kukrsID_repo/continuous-20508-both_sexes_asc_with-kukrsIDs.tsv"
+concatenated GWAS SS file with the file with restored rsID at: "/home/kukubuntu/data/continuous-20508-both_sexes_asc_with-kukrsIDs.tsv"
 --- Step 3/3 finished in 348.7267150878906 seconds ---
 see resulting file at:
-"/home/kukubuntu/Summary Stats to Fix/data/test_kukrsID_repo/continuous-20508-both_sexes_asc_with-kukrsIDs.tsv"
+"/home/kukubuntu/data/continuous-20508-both_sexes_asc_with-kukrsIDs.tsv"
 ```
 
