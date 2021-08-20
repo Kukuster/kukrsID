@@ -4,6 +4,7 @@
 **/ENV
 **/venv
 **/__pycache__
+**/*.pyc
 
 build/
 *.egg-info
@@ -18,4 +19,11 @@ profile_default/
 .python-version
 
 __pypackages__/
+
+
+/.vscode
+
+/sample/*.json
+/sample/*asc*
+/sample/*kukrsID*
 

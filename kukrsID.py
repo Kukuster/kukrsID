@@ -34,7 +34,7 @@ if not file_exists(CONFIG_JSON):
 
 CONFIG = json.load(open(CONFIG_JSON,))
 
-the_dir = os.path.dirname(inspect.getfile(inspect.currentframe())) # type: ignore
+the_dir = os.path.dirname(inspect.getfile(inspect.currentframe())) or os.getcwd() # type: ignore
 
 lib_dir = the_dir +"/lib"
 
@@ -46,7 +46,7 @@ cat_GWASSS_and_rsIDs_columns = lib_dir+"/cat_GWASSS_and_rsIDs_columns.py"
 ##### 1 #####
 print('=== Step 1/3: Sort GWAS SS file by Chr and BP ===')
 start_time = time.time()
-ec = call(["python",
+ec = call(["python3",
            sort_GWASSS_by_ChrBP,
            CONFIG[0]["i_GWAS_SS_file"],
            CONFIG[0]["o_sorted_GWAS_SS_file"],
@@ -62,7 +62,7 @@ if ec != 0:
 ##### 2 #####
 print('=== Step 2/3: Generate rsID column and save it to a file ===')
 start_time = time.time()
-ec = call(["python",
+ec = call(["python3",
            get_rsIDs_from_ChrBP,
            CONFIG[1]["i_sorted_GWAS_SS_file"],
            CONFIG[1]["o_rsIDs_file"],
@@ -79,7 +79,7 @@ if ec != 0:
 ##### 3 #####
 print('=== Step 3/3: Concatenate columns of the sorted GWAS SS file and rsID file ===')
 start_time = time.time()
-ec = call(["python",
+ec = call(["python3",
            cat_GWASSS_and_rsIDs_columns, 
            CONFIG[2]["i_sorted_GWAS_SS_file"],
            CONFIG[2]["i_rsIDs_file"],

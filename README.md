@@ -31,7 +31,7 @@ $ python3 ~/kukrsID/add_missing_rsID_column.py continuous-20508-both_sexes.tsv.j
 === Step 1/3: Sort GWAS SS file by Chr and BP ===
 --- Step 1/3 finished in 394.9851267337799 seconds ---
 === Step 2/3: Generate rsID column and save it to a file ===
-input GWAS SS file:  "/home/kukubuntu/data/continuous-20508-both_sexes_relevantColumns_asc.tsv"
+input GWAS SS file:  "/home/kukubuntu/data/continuous-20508-both_sexes_asc.tsv"
 successfully restored 28940544 rsIDs based on provided dbSNP file: '/media/kukubuntu/Samsung_T5/dbSNP151_GRCh37.vcf.gz'
 --- Step 2/3 finished in 3006.899871110916 seconds ---
 === Step 3/3: Concatenate columns of the sorted GWAS SS file and rsID file ===
